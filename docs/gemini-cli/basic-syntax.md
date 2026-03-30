@@ -1,2 +1,2 @@
 # Basic syntax
-gemini mcp add --transport sse <name> <url>
+gemini mcp add --transport http <name> <url>

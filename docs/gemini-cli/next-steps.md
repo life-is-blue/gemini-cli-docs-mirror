@@ -1,8 +1,8 @@
 ## Next steps
 
-- Explore [File management](/docs/cli/tutorials/file-management) to see how to apply the code you
-  generate.
-- See the [Web search tool reference](/docs/tools/web-search) for citation
+- Explore [Session management](/docs/cli/tutorials/session-management) to save your plan and
+  finish it tomorrow.
+- See the [Todo tool reference](/docs/tools/todos) for technical schema
   details.
-- See the [Web fetch tool reference](/docs/tools/web-fetch) for technical
-  limitations.
+- Learn about [Memory management](/docs/cli/tutorials/memory-management) to persist planning
+  preferences (e.g., "Always create a test plan first").

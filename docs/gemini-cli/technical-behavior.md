@@ -1,6 +1,7 @@
 ## Technical behavior
 
-- **Grounding:** Returns a generated summary based on search results.
-- **Citations:** Includes source URIs and titles for factual grounding.
-- **Processing:** The Gemini API processes the search results before returning a
-  synthesized response to the agent.
+- **Confirmation:** Triggers a confirmation dialog showing the converted URLs.
+- **Processing:** Uses the Gemini API's `urlContext` for retrieval.
+- **Fallback:** If API access fails, the tool attempts to fetch raw content
+  directly from your local machine.
+- **Formatting:** Returns a synthesized response with source attribution.

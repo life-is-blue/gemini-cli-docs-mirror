@@ -1,10 +1,10 @@
 ## Behavior
 
-Gemini CLI uses this tool to ensure technical accuracy:
+The agent uses this tool to provide professional-grade assistance:
 
-- **Capability discovery:** If Gemini CLI is unsure how a feature works, it can
-  lookup the corresponding documentation.
-- **Reference lookup:** Gemini CLI can verify slash command sub-commands or
-  specific setting names.
-- **Self-correction:** Gemini CLI can use the documentation to correct its
-  understanding of Gemini CLI's system logic.
+- **Specialized logic:** Skills contain expert-level procedures for complex
+  workflows.
+- **Dynamic capability:** Activating a skill can grant the agent access to new,
+  task-specific tools.
+- **Contextual awareness:** Skills help the agent focus on the most relevant
+  standards and conventions for a particular task.

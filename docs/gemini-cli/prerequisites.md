@@ -1,4 +1,4 @@
 ## Prerequisites
 
 - Gemini CLI installed and authenticated.
-- An internet connection.
+- A complex task in mind (e.g., a multi-file refactor or new feature).

@@ -1,8 +1,8 @@
 # Create test input
-@"
+cat > test-input.json << 'EOF'
 {
   "session_id": "test-123",
-  "cwd": "C:\\temp\\test",
+  "cwd": "/tmp/test",
   "hook_event_name": "BeforeTool",
   "tool_name": "write_file",
   "tool_input": {
@@ -10,4 +10,4 @@
     "content": "Test content"
   }
 }
-"@ | Out-File -FilePath test-input.json -Encoding utf8
+EOF

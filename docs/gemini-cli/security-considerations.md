@@ -1,12 +1,10 @@
-### Security considerations
+## Security considerations
 
-- **Trust settings:** The `trust` option bypasses all confirmation dialogs. Use
-  cautiously and only for servers you completely control
-- **Access tokens:** Be security-aware when configuring environment variables
-  containing API keys or tokens. See
-  [Security and environment sanitization](#security-and-environment-sanitization)
-  for details on how Gemini CLI protects your credentials.
-- **Sandbox compatibility:** When using sandboxing, ensure MCP servers are
-  available within the sandbox environment
-- **Private data:** Using broadly scoped personal access tokens can lead to
-  information leakage between repositories.
+The core plays a vital role in security:
+
+- **API key management:** It handles the `GEMINI_API_KEY` and ensures it's used
+  securely when communicating with the Gemini API.
+- **Tool execution:** When tools interact with the local system (e.g.,
+  `run_shell_command`), the core (and its underlying tool implementations) must
+  do so with appropriate caution, often involving sandboxing mechanisms to
+  prevent unintended modifications.

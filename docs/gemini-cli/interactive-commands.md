@@ -1,10 +1,14 @@
 ## Interactive commands
 
-The `run_shell_command` tool now supports interactive commands by integrating a
-pseudo-terminal (pty). This allows you to run commands that require real-time
-user input, such as text editors (`vim`, `nano`), terminal-based UIs (`htop`),
-and interactive version control operations (`git rebase -i`).
+These commands are available within the interactive REPL.
 
-When an interactive command is running, you can send input to it from the Gemini
-CLI. To focus on the interactive shell, press `Tab`. The terminal output,
-including complex TUIs, will be rendered correctly.
+| Command              | Description                              |
+| -------------------- | ---------------------------------------- |
+| `/skills reload`     | Reload discovered skills from disk       |
+| `/agents reload`     | Reload the agent registry                |
+| `/commands reload`   | Reload custom slash commands             |
+| `/memory reload`     | Reload context files (e.g., `GEMINI.md`) |
+| `/mcp reload`        | Restart and reload MCP servers           |
+| `/extensions reload` | Reload all active extensions             |
+| `/help`              | Show help for all commands               |
+| `/quit`              | Exit the interactive session             |

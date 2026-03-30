@@ -1,3 +1,7 @@
 # Check exit code
-Write-Host "Exit code: $LASTEXITCODE"
+echo "Exit code: $?"
 ```
+
+**Windows (PowerShell)**
+
+```powershell

@@ -1,17 +1,17 @@
 ## Highlights
 
-- **Subagent Architecture Enhancements:** Significant updates to subagents,
-  including local execution, tool isolation, multi-registry discovery, dynamic
-  tool filtering, and JIT context injection.
-- **Enhanced Security & Sandboxing:** Implemented strict macOS sandboxing using
-  Seatbelt allowlist, native Windows sandboxing, and support for
-  "Write-Protected" governance files.
-- **Agent Context & State Management:** Introduced task tracker protocol
-  integration, 'blocked' statuses for tasks/todos, and `AgentSession` for
-  improved state management and replay semantics.
-- **Browser & ACP Capabilities:** Added privacy consent for the browser agent,
-  sensitive action controls, improved API token usage metadata, and gateway auth
-  support via ACP.
-- **CLI & UX Improvements:** Implemented a refreshed Composer layout, expanded
-  terminal fallback warnings, dynamic model resolution, and Git worktree support
-  for isolated parallel sessions.
+- **Customizable Keyboard Shortcuts:** Significant improvements to input
+  flexibility with support for custom keybindings, literal character bindings,
+  and extended terminal protocol keys.
+- **Vim Mode Enhancements:** Further refinement of the Vim modal editing
+  experience, adding common motions like \`X\`, \`~\`, \`r\`, and \`f/F/t/T\`,
+  along with yank and paste support.
+- **Enhanced Security through Sandboxing:** Introduction of a unified
+  \`SandboxManager\` and integration of Linux-native sandboxing (bubblewrap and
+  seccomp) to isolate tool execution and improve system security.
+- **JIT Context Discovery:** Improved performance and accuracy by enabling
+  Just-In-Time context loading for file system tools, ensuring the model has the
+  most relevant information without overwhelming the context.
+- **Subagent & Performance Updates:** Subagents are now enabled by default,
+  supported by a model-driven parallel tool scheduler and code splitting for
+  faster startup and more efficient task execution.

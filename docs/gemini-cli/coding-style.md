@@ -1,6 +1,6 @@
-## Coding Style:
+## Coding Style
 
 - Use 2 spaces for indentation.
-- Interface names should be prefixed with `I` (e.g., `IUserService`).
-- Private class members should be prefixed with an underscore (`_`).
+- Prefix interface names with `I` (for example, `IUserService`).
 - Always use strict equality (`===` and `!==`).
+```

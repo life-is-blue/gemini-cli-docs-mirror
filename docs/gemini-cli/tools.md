@@ -1,11 +1,11 @@
-### `/tools`
+### Tools
 
-- **Description:** Display a list of tools that are currently available within
-  Gemini CLI.
-- **Usage:** `/tools [desc]`
-- **Sub-commands:**
-  - **`desc`** or **`descriptions`**:
-    - **Description:** Show detailed descriptions of each tool, including each
-      tool's name with its full description as provided to the model.
-  - **`nodesc`** or **`nodescriptions`**:
-    - **Description:** Hide tool descriptions, showing only the tool names.
+| UI Label                         | Setting                              | Description                                                                                                                                                                | Default |
+| -------------------------------- | ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| Sandbox Allowed Paths            | `tools.sandboxAllowedPaths`          | List of additional paths that the sandbox is allowed to access.                                                                                                            | `[]`    |
+| Sandbox Network Access           | `tools.sandboxNetworkAccess`         | Whether the sandbox is allowed to access the network.                                                                                                                      | `false` |
+| Enable Interactive Shell         | `tools.shell.enableInteractiveShell` | Use node-pty for an interactive shell experience. Fallback to child_process still applies.                                                                                 | `true`  |
+| Show Color                       | `tools.shell.showColor`              | Show color in shell output.                                                                                                                                                | `false` |
+| Use Ripgrep                      | `tools.useRipgrep`                   | Use ripgrep for file content search instead of the fallback implementation. Provides faster search performance.                                                            | `true`  |
+| Tool Output Truncation Threshold | `tools.truncateToolOutputThreshold`  | Maximum characters to show when truncating large tool outputs. Set to 0 or negative to disable truncation.                                                                 | `40000` |
+| Disable LLM Correction           | `tools.disableLLMCorrection`         | Disable LLM-based error correction for edit tools. When enabled, tools will fail immediately if exact string matches are not found, instead of attempting to self-correct. | `true`  |

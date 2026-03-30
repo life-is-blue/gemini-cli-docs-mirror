@@ -1,5 +1,5 @@
 ## Use cases
 
-- Researching the latest version of a software library or API.
-- Finding solutions to recent software bugs or security vulnerabilities.
-- Retrieving news or documentation updated after the model's knowledge cutoff.
+- Summarizing technical articles or blog posts.
+- Comparing data between two or more web pages.
+- Extracting specific information from a documentation site.

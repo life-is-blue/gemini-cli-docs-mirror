@@ -1,9 +1,7 @@
-## Best practices
+## Best Practices
 
-- **Keep it focused:** Avoid adding excessive content to `GEMINI.md`. Keep
-  instructions actionable and relevant to code generation.
-- **Use negative constraints:** Explicitly telling the agent what _not_ to do
-  (for example, "Do not use class components") is often more effective than
-  vague positive instructions.
-- **Review often:** Periodically check your `GEMINI.md` files to remove outdated
-  rules.
+1. **Use descriptive file names** for imported components
+2. **Keep imports shallow** - avoid deeply nested import chains
+3. **Document your structure** - maintain a clear hierarchy of imported files
+4. **Test your imports** - ensure all referenced files exist and are accessible
+5. **Use relative paths** when possible for better portability

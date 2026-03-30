@@ -1,12 +1,5 @@
-### `/ide`
+### IDE
 
-- **Description:** Manage IDE integration.
-- **Sub-commands:**
-  - **`disable`**:
-    - **Description:** Disable IDE integration.
-  - **`enable`**:
-    - **Description:** Enable IDE integration.
-  - **`install`**:
-    - **Description:** Install required IDE companion.
-  - **`status`**:
-    - **Description:** Check status of IDE integration.
+| UI Label | Setting       | Description                  | Default |
+| -------- | ------------- | ---------------------------- | ------- |
+| IDE Mode | `ide.enabled` | Enable IDE integration mode. | `false` |

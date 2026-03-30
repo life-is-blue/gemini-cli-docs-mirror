@@ -1,5 +1,6 @@
 ## Description
 
-This tool is used when Gemini CLI needs to verify specific details about Gemini
-CLI's internal features, built-in commands, or configuration options. It
-provides direct access to the Markdown files in the `docs/` directory.
+Skills are packages of instructions and tools designed for specific engineering
+tasks, such as reviewing code or creating pull requests. Gemini CLI uses this
+tool to "activate" a skill, which provides it with detailed guidelines and
+specialized tools tailored to that task.
