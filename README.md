@@ -13,8 +13,7 @@ This repository fetches the complete Gemini CLI documentation and stores it loca
 - `scripts/fetch_gemini_docs.py`: fetcher + manifest generator
 - `config/sources.json`: source definitions
 - `docs/`: mirrored markdown content and manifest
-- `.cnb.yml`: CNB scheduled + manual sync workflow
-- `.cnb/web_trigger.yml`: CNB page button configuration
+- `.github/workflows/update-docs.yml`: GitHub Actions scheduled + manual sync workflow
 
 ## Run locally
 
@@ -23,13 +22,13 @@ pip install -r scripts/requirements.txt
 python3 scripts/fetch_gemini_docs.py
 ```
 
-## CNB automation
+## GitHub Actions automation
 
-This repository is configured for CNB-native automation:
+This repository is configured for GitHub Actions automation:
 
-- Scheduled sync every 6 hours
-- Manual sync button on `main` branch page
-- Push / PR validation on fetcher changes
+- Scheduled sync every 6 hours (`cron: 0 */6 * * *`)
+- Manual trigger via "Run workflow" button
+- Concurrency control to prevent parallel runs
 
 ## Notes
 
