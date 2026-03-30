@@ -1,0 +1,9 @@
+{
+  "sources": [
+    {
+      "id": "gemini-cli",
+      "llms_txt": "https://geminicli.com/llms.txt",
+      "output_subdir": "gemini-cli"
+    }
+  ]
+}
