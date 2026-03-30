@@ -1,2 +1,2 @@
 # Basic syntax
-gemini mcp add --transport http <name> <url>
+gemini mcp add [options] <name> <command> [args...]

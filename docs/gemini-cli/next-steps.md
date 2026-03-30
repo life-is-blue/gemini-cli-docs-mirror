@@ -1,8 +1,7 @@
 ## Next steps
 
-- Explore [Session management](/docs/cli/tutorials/session-management) to save your plan and
-  finish it tomorrow.
-- See the [Todo tool reference](/docs/tools/todos) for technical schema
-  details.
-- Learn about [Memory management](/docs/cli/tutorials/memory-management) to persist planning
-  preferences (e.g., "Always create a test plan first").
+- Learn about [Ignoring files](/docs/cli/gemini-ignore) to exclude content from the
+  context system.
+- Explore the [Memory tool](/docs/tools/memory) to save persistent memories.
+- See how to use [Custom commands](/docs/cli/custom-commands) to automate common
+  prompts.

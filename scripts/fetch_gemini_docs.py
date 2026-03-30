@@ -95,8 +95,19 @@ def load_existing_manifest(path: Path) -> Dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def clean_title(title: str) -> str:
+    """Remove markdown links and URLs from title."""
+    # Remove markdown links: [text](url) -> text
+    title = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', title)
+    # Remove URLs
+    title = re.sub(r'https?://\S+', '', title)
+    return title.strip()
+
+
 def sanitize_filename(name: str) -> str:
     """Convert title to safe filename."""
+    # Remove markdown links and URLs first
+    name = clean_title(name)
     # Replace spaces and special chars with hyphens
     sanitized = re.sub(r"[^\w\s-]", "", name.lower())
     sanitized = re.sub(r"[\s]+", "-", sanitized)
@@ -172,7 +183,16 @@ def main() -> int:
 
             for title, section_content in sections:
                 try:
-                    filename = sanitize_filename(title)
+                    # Clean title for display
+                    clean_title_str = clean_title(title)
+                    # Generate unique filename with collision handling
+                    base_filename = sanitize_filename(title)
+                    filename = base_filename
+                    counter = 1
+                    while f"{source.output_subdir}/{filename}.md" in new_files:
+                        counter += 1
+                        filename = f"{base_filename}-{counter}"
+                    
                     dest = source_root / f"{filename}.md"
 
                     digest = sha256_text(section_content)
@@ -186,14 +206,14 @@ def main() -> int:
                     manifest_key = f"{source.output_subdir}/{filename}.md"
                     new_files[manifest_key] = {
                         "source": source.source_id,
-                        "title": title,
+                        "title": clean_title_str,
                         "sha256": digest,
                         "bytes": len(section_content.encode("utf-8")),
                         "fetched_at": fetch_started_at,
                     }
                     fetched_paths.add(dest)
                     successful_sections += 1
-                    print(f"[OK] {manifest_key} ({title})")
+                    print(f"[OK] {manifest_key} ({clean_title_str})")
 
                 except Exception as exc:
                     print(f"[WARN] failed section title={title} err={exc}")

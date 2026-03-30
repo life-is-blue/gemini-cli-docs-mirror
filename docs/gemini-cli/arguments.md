@@ -1,5 +1,6 @@
 ### Arguments
 
-- `prompt` (string, required): A request containing up to 20 valid URLs
-  (starting with `http://` or `https://`) and instructions on how to process
-  them.
+`activate_skill` takes one argument:
+
+- `name` (enum, required): The name of the skill to activate (for example,
+  `code-reviewer`, `pr-creator`, or `docs-writer`).

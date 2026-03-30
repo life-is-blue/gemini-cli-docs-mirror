@@ -1,9 +1,15 @@
 ## Manage extensions
 
-Use the `gemini extensions` command group to manage your extensions from the
-terminal.
+Use the interactive `/extensions` command to verify your installed extensions
+and their status:
 
-Note that commands like `gemini extensions install` are not supported within the
-CLI's interactive mode. However, you can use the `/extensions list` command to
-view installed extensions. All management operations, including updates to slash
-commands, take effect only after you restart the CLI session.
+```bash
+/extensions list
+```
+
+You can also manage extensions from your terminal using the `gemini extensions`
+command group:
+
+```bash
+gemini extensions list
+```

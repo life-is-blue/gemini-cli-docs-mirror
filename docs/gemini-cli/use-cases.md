@@ -1,5 +1,5 @@
 ## Use cases
 
-- Summarizing technical articles or blog posts.
-- Comparing data between two or more web pages.
-- Extracting specific information from a documentation site.
+- Persisting user preferences (for example, "I prefer functional programming").
+- Saving project-wide architectural decisions.
+- Storing frequently used aliases or system configurations.

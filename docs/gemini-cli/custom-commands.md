@@ -1,10 +1,7 @@
-### Custom commands
+# [Custom commands](http://geminicli.com/docs/cli/custom-commands.md)
 
-Provide [custom commands](/docs/cli/custom-commands) by placing TOML files in a
-`commands/` subdirectory. Gemini CLI uses the directory structure to determine
-the command name.
 
-For an extension named `gcp`:
-
-- `commands/deploy.toml` becomes `/deploy`
-- `commands/gcs/sync.toml` becomes `/gcs:sync` (namespaced with a colon)
+Custom commands let you save and reuse your favorite or most frequently used
+prompts as personal shortcuts within Gemini CLI. You can create commands that
+are specific to a single project or commands that are available globally across
+all your projects, streamlining your workflow and ensuring consistency.

@@ -1,8 +1,6 @@
 ## Usage
 
-The `activate_skill` tool is used exclusively by the Gemini agent. You cannot
-invoke this tool manually.
+To use the rewind feature, simply type `/rewind` into the input prompt and press
+**Enter**.
 
-When the agent identifies that a task matches a discovered skill, it requests to
-activate that skill. Once activated, the agent's behavior is guided by the
-skill's specific instructions until the task is complete.
+Alternatively, you can use the keyboard shortcut: **Press `Esc` twice**.

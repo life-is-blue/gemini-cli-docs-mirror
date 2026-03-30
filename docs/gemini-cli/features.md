@@ -1,22 +1,27 @@
-### Features
+## Features
 
-- **Workspace context:** The CLI automatically gains awareness of your workspace
-  to provide more relevant and accurate responses. This context includes:
-  - The **10 most recently accessed files** in your workspace.
-  - Your active cursor position.
-  - Any text you have selected (up to a 16KB limit; longer selections will be
-    truncated).
+Technical documentation for each capability of Gemini CLI.
 
-- **Native diffing:** When Gemini suggests code modifications, you can view the
-  changes directly within your IDE's native diff viewer. This lets you review,
-  edit, and accept or reject the suggested changes seamlessly.
-
-- **VS Code commands:** You can access Gemini CLI features directly from the VS
-  Code Command Palette (`Cmd+Shift+P` or `Ctrl+Shift+P`):
-  - `Gemini CLI: Run`: Starts a new Gemini CLI session in the integrated
-    terminal.
-  - `Gemini CLI: Accept Diff`: Accepts the changes in the active diff editor.
-  - `Gemini CLI: Close Diff Editor`: Rejects the changes and closes the active
-    diff editor.
-  - `Gemini CLI: View Third-Party Notices`: Displays the third-party notices for
-    the extension.
+- **[Extensions](/docs/extensions):** Extend Gemini CLI with new tools and
+  capabilities.
+- **[Agent Skills](/docs/cli/skills):** Use specialized agents for specific
+  tasks.
+- **[Checkpointing](/docs/cli/checkpointing):** Automatic session snapshots.
+- **[Headless mode](/docs/cli/headless):** Programmatic and scripting interface.
+- **[Hooks](/docs/hooks):** Customize Gemini CLI behavior with scripts.
+- **[IDE integration](/docs/ide-integration):** Integrate Gemini CLI with
+  your favorite IDE.
+- **[MCP servers](/docs/tools/mcp-server):** Connect to and use remote agents.
+- **[Model routing](/docs/cli/model-routing):** Automatic fallback resilience.
+- **[Model selection](/docs/cli/model):** Choose the best model for your needs.
+- **[Plan mode 🔬](/docs/cli/plan-mode):** Use a safe, read-only mode for
+  planning complex changes.
+- **[Subagents 🔬](/docs/core/subagents):** Using specialized agents for specific
+  tasks.
+- **[Remote subagents 🔬](/docs/core/remote-agents):** Connecting to and using
+  remote agents.
+- **[Rewind](/docs/cli/rewind):** Rewind and replay sessions.
+- **[Sandboxing](/docs/cli/sandbox):** Isolate tool execution.
+- **[Settings](/docs/cli/settings):** Full configuration reference.
+- **[Telemetry](/docs/cli/telemetry):** Usage and performance metric details.
+- **[Token caching](/docs/cli/token-caching):** Performance optimization.

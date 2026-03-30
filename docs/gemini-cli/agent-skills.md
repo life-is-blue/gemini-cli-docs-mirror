@@ -1,5 +1,8 @@
-### Agent skills
+# [Agent Skills](http://geminicli.com/docs/cli/skills.md)
 
-Bundle [agent skills](/docs/cli/skills) to provide specialized workflows. Place
-skill definitions in a `skills/` directory. For example,
-`skills/security-audit/SKILL.md` exposes a `security-audit` skill.
+
+Agent Skills allow you to extend Gemini CLI with specialized expertise,
+procedural workflows, and task-specific resources. Based on the
+[Agent Skills](https://agentskills.io) open standard, a "skill" is a
+self-contained directory that packages instructions and assets into a
+discoverable capability.
