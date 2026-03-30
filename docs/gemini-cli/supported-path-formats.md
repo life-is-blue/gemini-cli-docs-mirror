@@ -1,1 +1,0 @@
-## Supported path formats

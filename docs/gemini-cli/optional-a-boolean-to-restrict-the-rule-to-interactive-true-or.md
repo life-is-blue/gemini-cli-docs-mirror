@@ -1,1 +1,0 @@
-# (Optional) A boolean to restrict the rule to interactive (true) or

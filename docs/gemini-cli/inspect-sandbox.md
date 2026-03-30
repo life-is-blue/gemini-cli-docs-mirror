@@ -1,3 +1,0 @@
-### Inspect sandbox
-
-```bash

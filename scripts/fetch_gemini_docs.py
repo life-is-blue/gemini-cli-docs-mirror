@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fetch Gemini CLI docs from llms.txt (all-in-one format)."""
+"""Fetch Gemini CLI markdown docs listed in llms.txt indexes."""
 
 from __future__ import annotations
 
@@ -12,8 +12,9 @@ import time
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Dict, List, Set
+from typing import Dict, List, Set, Tuple
 from urllib.error import HTTPError, URLError
+from urllib.parse import unquote, urlparse
 from urllib.request import Request, urlopen
 
 import certifi
@@ -25,10 +26,11 @@ MANIFEST_PATH = DOCS_ROOT / "docs_manifest.json"
 
 USER_AGENT = "gemini-cli-docs-mirror/1.0"
 
-# Match markdown section headers like "# Title" or "## Title"
-SECTION_HEADER_REGEX = re.compile(r"^(#{1,3})\s+(.+)$", re.MULTILINE)
+# Capture markdown links and bare URLs from llms.txt.
+MARKDOWN_LINK_REGEX = re.compile(r"\[[^\]]+\]\((https?://[^)\s]+)\)")
+BARE_URL_REGEX = re.compile(r"(?<!\()https?://[^\s<>()\"'`]+")
 
-REQUEST_TIMEOUT_SECONDS = 60
+REQUEST_TIMEOUT_SECONDS = 30
 MAX_RETRIES = 4
 BASE_BACKOFF_SECONDS = 1.5
 SSL_CONTEXT = ssl.create_default_context(cafile=certifi.where())
@@ -38,6 +40,9 @@ SSL_CONTEXT = ssl.create_default_context(cafile=certifi.where())
 class Source:
     source_id: str
     llms_txt: str
+    allowed_host: str
+    docs_path_prefix: str
+    root_docs_path: str
     output_subdir: str
 
 
@@ -55,13 +60,34 @@ def load_sources(config_path: Path) -> List[Source]:
     for raw in raw_sources:
         source_id = raw.get("id")
         llms_txt = raw.get("llms_txt")
+        allowed_host = raw.get("allowed_host")
+        docs_path_prefix = raw.get("docs_path_prefix")
+        root_docs_path = raw.get("root_docs_path")
         output_subdir = raw.get("output_subdir")
-        if not source_id or not llms_txt or not output_subdir:
+
+        if (
+            not source_id
+            or not llms_txt
+            or not allowed_host
+            or not docs_path_prefix
+            or not root_docs_path
+            or not output_subdir
+        ):
             raise RuntimeError(f"Invalid source entry: {raw}")
+
+        if not docs_path_prefix.startswith("/") or not docs_path_prefix.endswith("/"):
+            raise RuntimeError(f"docs_path_prefix must look like '/docs/': {docs_path_prefix}")
+
+        if not root_docs_path.startswith("/"):
+            raise RuntimeError(f"root_docs_path must start with '/': {root_docs_path}")
+
         result.append(
             Source(
                 source_id=source_id,
                 llms_txt=llms_txt,
+                allowed_host=allowed_host,
+                docs_path_prefix=docs_path_prefix,
+                root_docs_path=root_docs_path,
                 output_subdir=output_subdir,
             )
         )
@@ -85,6 +111,73 @@ def fetch_text(url: str) -> str:
     raise RuntimeError(f"Failed to fetch {url}: {last_error}")
 
 
+def canonicalize_candidate_url(raw_url: str, source: Source) -> str | None:
+    # Trim common punctuation around copied markdown links.
+    candidate = raw_url.strip().lstrip("(<").rstrip(".,;:!?)]}>\"'`")
+
+    try:
+        parsed = urlparse(candidate)
+    except ValueError:
+        return None
+    if parsed.scheme not in {"http", "https"}:
+        return None
+
+    if parsed.netloc != source.allowed_host:
+        return None
+
+    path = parsed.path
+    if not (path == source.root_docs_path or path.startswith(source.docs_path_prefix)):
+        return None
+
+    if not path.endswith(".md"):
+        return None
+
+    # Normalize to https and strip query/fragment for stable manifest keys.
+    normalized = parsed._replace(scheme="https", query="", fragment="")
+    return normalized.geturl()
+
+
+def parse_markdown_urls(llms_text: str, source: Source) -> List[str]:
+    candidates = set(MARKDOWN_LINK_REGEX.findall(llms_text))
+    candidates.update(BARE_URL_REGEX.findall(llms_text))
+
+    urls: Set[str] = set()
+    for raw in candidates:
+        normalized = canonicalize_candidate_url(raw, source)
+        if normalized:
+            urls.add(normalized)
+
+    return sorted(urls)
+
+
+def normalized_relative_path(url: str, source: Source) -> Path:
+    parsed_url = urlparse(url)
+
+    if parsed_url.netloc != source.allowed_host:
+        raise RuntimeError(f"Disallowed host for url={url}")
+
+    if parsed_url.path == source.root_docs_path:
+        return Path("index.md")
+
+    if not parsed_url.path.startswith(source.docs_path_prefix):
+        raise RuntimeError(
+            f"URL path does not match allowed docs prefix: url={url} prefix={source.docs_path_prefix}"
+        )
+
+    relative = unquote(parsed_url.path[len(source.docs_path_prefix) :]).lstrip("/")
+    if not relative:
+        relative = "index.md"
+
+    rel_path = Path(relative)
+    if any(part in {"", ".", ".."} for part in rel_path.parts):
+        raise RuntimeError(f"Unsafe relative path derived from {url}: {relative}")
+
+    if rel_path.suffix != ".md":
+        raise RuntimeError(f"Expected .md path, got {relative}")
+
+    return rel_path
+
+
 def sha256_text(content: str) -> str:
     return hashlib.sha256(content.encode("utf-8")).hexdigest()
 
@@ -95,58 +188,13 @@ def load_existing_manifest(path: Path) -> Dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def clean_title(title: str) -> str:
-    """Remove markdown links and URLs from title."""
-    # Remove markdown links: [text](url) -> text
-    title = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', title)
-    # Remove URLs
-    title = re.sub(r'https?://\S+', '', title)
-    return title.strip()
-
-
-def sanitize_filename(name: str) -> str:
-    """Convert title to safe filename."""
-    # Remove markdown links and URLs first
-    name = clean_title(name)
-    # Replace spaces and special chars with hyphens
-    sanitized = re.sub(r"[^\w\s-]", "", name.lower())
-    sanitized = re.sub(r"[\s]+", "-", sanitized)
-    sanitized = re.sub(r"-+", "-", sanitized).strip("-")
-    return sanitized or "untitled"
-
-
-def extract_sections(content: str) -> List[tuple[str, str]]:
-    """
-    Extract sections from all-in-one llms.txt format.
-    Returns list of (title, content) tuples.
-    """
-    sections = []
-    lines = content.split("\n")
-    current_title = None
-    current_lines: List[str] = []
-
-    for line in lines:
-        header_match = SECTION_HEADER_REGEX.match(line)
-        if header_match:
-            # Save previous section if exists
-            if current_title is not None and current_lines:
-                section_content = "\n".join(current_lines).strip()
-                if section_content:
-                    sections.append((current_title, section_content))
-
-            # Start new section
-            current_title = header_match.group(2).strip()
-            current_lines = [line]
-        else:
-            current_lines.append(line)
-
-    # Don't forget the last section
-    if current_title is not None and current_lines:
-        section_content = "\n".join(current_lines).strip()
-        if section_content:
-            sections.append((current_title, section_content))
-
-    return sections
+def remove_empty_dirs(start: Path, stop: Path) -> None:
+    current = start
+    while current != stop and current.exists():
+        if any(current.iterdir()):
+            break
+        current.rmdir()
+        current = current.parent
 
 
 def main() -> int:
@@ -158,71 +206,53 @@ def main() -> int:
     existing_files = existing_manifest.get("files", {})
 
     new_files: Dict[str, Dict] = {}
-    fetched_paths: Set[Path] = set()
 
     fetch_started_at = now_iso()
-    total_sections = 0
-    successful_sections = 0
-    failed_sources: List[tuple[str, str]] = []
+    total_urls = 0
+    successful_urls = 0
+    failed_urls: List[Tuple[str, str]] = []
 
     for source in sources:
-        print(f"[INFO] Source={source.source_id} url={source.llms_txt}")
+        print(f"[INFO] Source={source.source_id} index={source.llms_txt}")
+        llms_text = fetch_text(source.llms_txt)
+        urls = parse_markdown_urls(llms_text, source)
+        if not urls:
+            raise RuntimeError(f"No markdown URLs discovered from {source.llms_txt}")
 
-        try:
-            content = fetch_text(source.llms_txt)
-            print(f"[INFO] Source={source.source_id} fetched {len(content)} bytes")
+        print(f"[INFO] Source={source.source_id} discovered={len(urls)}")
+        total_urls += len(urls)
 
-            # Extract sections from all-in-one content
-            sections = extract_sections(content)
-            print(f"[INFO] Source={source.source_id} discovered {len(sections)} sections")
+        source_root = DOCS_ROOT / source.output_subdir
+        source_root.mkdir(parents=True, exist_ok=True)
 
-            total_sections += len(sections)
+        for url in urls:
+            try:
+                rel = normalized_relative_path(url, source)
+                dest = source_root / rel
+                dest.parent.mkdir(parents=True, exist_ok=True)
 
-            source_root = DOCS_ROOT / source.output_subdir
-            source_root.mkdir(parents=True, exist_ok=True)
+                content = fetch_text(url)
+                digest = sha256_text(content)
 
-            for title, section_content in sections:
-                try:
-                    # Clean title for display
-                    clean_title_str = clean_title(title)
-                    # Generate unique filename with collision handling
-                    base_filename = sanitize_filename(title)
-                    filename = base_filename
-                    counter = 1
-                    while f"{source.output_subdir}/{filename}.md" in new_files:
-                        counter += 1
-                        filename = f"{base_filename}-{counter}"
-                    
-                    dest = source_root / f"{filename}.md"
+                manifest_key = f"{source.output_subdir}/{rel.as_posix()}"
+                existing = existing_files.get(manifest_key, {})
+                existing_digest = existing.get("sha256")
+                if existing_digest != digest or not dest.exists():
+                    dest.write_text(content, encoding="utf-8")
 
-                    digest = sha256_text(section_content)
+                new_files[manifest_key] = {
+                    "source": source.source_id,
+                    "url": url,
+                    "sha256": digest,
+                    "bytes": len(content.encode("utf-8")),
+                    "fetched_at": fetch_started_at,
+                }
+                successful_urls += 1
+                print(f"[OK] {manifest_key}")
+            except Exception as exc:  # noqa: BLE001
+                print(f"[WARN] failed url={url} err={exc}")
+                failed_urls.append((url, str(exc)))
 
-                    existing = existing_files.get(f"{source.output_subdir}/{filename}.md", {})
-                    existing_digest = existing.get("sha256")
-
-                    if existing_digest != digest or not dest.exists():
-                        dest.write_text(section_content, encoding="utf-8")
-
-                    manifest_key = f"{source.output_subdir}/{filename}.md"
-                    new_files[manifest_key] = {
-                        "source": source.source_id,
-                        "title": clean_title_str,
-                        "sha256": digest,
-                        "bytes": len(section_content.encode("utf-8")),
-                        "fetched_at": fetch_started_at,
-                    }
-                    fetched_paths.add(dest)
-                    successful_sections += 1
-                    print(f"[OK] {manifest_key} ({clean_title_str})")
-
-                except Exception as exc:
-                    print(f"[WARN] failed section title={title} err={exc}")
-
-        except Exception as exc:
-            print(f"[ERROR] failed source={source.source_id} err={exc}")
-            failed_sources.append((source.source_id, str(exc)))
-
-    # Remove files that no longer exist
     previous_paths = set(existing_files.keys())
     current_paths = set(new_files.keys())
     removed_paths = sorted(previous_paths - current_paths)
@@ -231,13 +261,7 @@ def main() -> int:
         file_path = DOCS_ROOT / removed
         if file_path.exists():
             file_path.unlink()
-            # Clean empty parent dirs
-            parent = file_path.parent
-            while parent != DOCS_ROOT and parent.exists():
-                if any(parent.iterdir()):
-                    break
-                parent.rmdir()
-                parent = parent.parent
+            remove_empty_dirs(file_path.parent, DOCS_ROOT)
 
     manifest = {
         "generated_at": now_iso(),
@@ -247,33 +271,36 @@ def main() -> int:
             {
                 "id": s.source_id,
                 "llms_txt": s.llms_txt,
+                "allowed_host": s.allowed_host,
+                "docs_path_prefix": s.docs_path_prefix,
+                "root_docs_path": s.root_docs_path,
                 "output_subdir": s.output_subdir,
             }
             for s in sources
         ],
         "stats": {
-            "total_sections": total_sections,
-            "successful_sections": successful_sections,
-            "failed_sources": len(failed_sources),
+            "total_urls": total_urls,
+            "successful_urls": successful_urls,
+            "failed_urls": len(failed_urls),
             "removed_files": len(removed_paths),
         },
-        "failed": [{"source": src, "error": err} for src, err in failed_sources],
+        "failed": [{"url": url, "error": err} for url, err in failed_urls],
         "files": {k: new_files[k] for k in sorted(new_files.keys())},
     }
 
     MANIFEST_PATH.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
 
     print("\n[SUMMARY]")
-    print(f"total_sections={total_sections}")
-    print(f"successful_sections={successful_sections}")
-    print(f"failed_sources={len(failed_sources)}")
+    print(f"total_urls={total_urls}")
+    print(f"successful_urls={successful_urls}")
+    print(f"failed_urls={len(failed_urls)}")
     print(f"removed_files={len(removed_paths)}")
 
-    if failed_sources and strict_fetch:
+    if failed_urls and strict_fetch:
         print("[ERROR] STRICT_FETCH=1 and failures detected")
         return 1
 
-    if successful_sections == 0:
+    if successful_urls == 0:
         print("[ERROR] No documents fetched successfully")
         return 1
 

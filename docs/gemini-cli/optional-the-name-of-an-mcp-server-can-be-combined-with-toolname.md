@@ -1,1 +1,0 @@
-# (Optional) The name of an MCP server. Can be combined with toolName

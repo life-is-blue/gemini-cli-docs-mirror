@@ -1,1 +1,0 @@
-# Project: My Awesome TypeScript Library

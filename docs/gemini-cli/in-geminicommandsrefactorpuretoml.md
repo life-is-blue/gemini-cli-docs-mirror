@@ -1,1 +1,0 @@
-# In: ~/.gemini/commands/refactor/pure.toml

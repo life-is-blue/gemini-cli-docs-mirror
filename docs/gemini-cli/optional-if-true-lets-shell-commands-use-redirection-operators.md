@@ -1,1 +1,0 @@
-# (Optional) If true, lets shell commands use redirection operators

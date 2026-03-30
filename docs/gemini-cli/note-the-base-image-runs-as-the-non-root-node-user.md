@@ -1,1 +1,0 @@
-# Note: The base image runs as the non-root 'node' user.

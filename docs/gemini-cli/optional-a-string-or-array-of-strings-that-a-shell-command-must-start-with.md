@@ -1,1 +1,0 @@
-# (Optional) A string or array of strings that a shell command must start with.

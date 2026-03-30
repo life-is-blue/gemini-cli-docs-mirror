@@ -1,1 +1,0 @@
-## Google AI Pro/Ultra and subscription FAQs

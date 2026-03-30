@@ -1,1 +1,0 @@
-# defined in. In chained commands (e.g., cmd1 > file && cmd2), each

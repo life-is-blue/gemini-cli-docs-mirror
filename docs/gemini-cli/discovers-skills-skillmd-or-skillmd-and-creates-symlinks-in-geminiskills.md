@@ -1,1 +1,0 @@
-# Discovers skills (SKILL.md or */SKILL.md) and creates symlinks in ~/.gemini/skills

@@ -1,6 +1,0 @@
-### Web
-
-| Tool                                          | Kind     | Description                                                                                                                                                                                                 |
-| :-------------------------------------------- | :------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`google_web_search`](/docs/tools/web-search) | `Search` | Performs a Google Search to find up-to-date information.                                                                                                                                                    |
-| [`web_fetch`](/docs/tools/web-fetch)          | `Fetch`  | Retrieves and processes content from specific URLs. **Warning:** This tool can access local and private network addresses (e.g., localhost), which may pose a security risk if used with untrusted prompts. |
