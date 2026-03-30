@@ -1,0 +1,1 @@
+# Link agent skills from a local directory via symlink

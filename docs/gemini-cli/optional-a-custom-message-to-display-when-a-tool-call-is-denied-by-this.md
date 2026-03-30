@@ -1,0 +1,1 @@
+# (Optional) A custom message to display when a tool call is denied by this

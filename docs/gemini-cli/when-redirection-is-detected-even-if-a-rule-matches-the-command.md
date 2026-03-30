@@ -1,0 +1,1 @@
+# when redirection is detected, even if a rule matches the command.

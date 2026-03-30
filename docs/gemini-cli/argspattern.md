@@ -1,0 +1,2 @@
+# `argsPattern`.
+commandPrefix = "git"

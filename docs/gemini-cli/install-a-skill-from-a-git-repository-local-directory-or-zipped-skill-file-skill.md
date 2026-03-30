@@ -1,0 +1,1 @@
+# Install a skill from a Git repository, local directory, or zipped skill file (.skill)

@@ -1,0 +1,1 @@
+# (Optional) Metadata hints provided by the tool. A rule matches if all

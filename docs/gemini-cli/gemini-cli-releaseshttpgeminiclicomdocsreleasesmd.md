@@ -1,0 +1,1 @@
+# [Gemini CLI releases](http://geminicli.com/docs/releases.md)

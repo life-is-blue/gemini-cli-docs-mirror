@@ -1,0 +1,1 @@
+# (Optional) A regex to match against the entire shell command.
