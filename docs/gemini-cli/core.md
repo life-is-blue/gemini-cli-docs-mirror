@@ -7,8 +7,8 @@ requests sent from `packages/cli`. For a general overview of Gemini CLI, see the
 
 ## Navigating this section
 
-- **[Sub-agents (experimental)](/docs/core/subagents):** Learn how to create and use
-  specialized sub-agents for complex tasks.
+- **[Sub-agents](/docs/core/subagents):** Learn how to create and use specialized
+  sub-agents for complex tasks.
 - **[Core tools reference](/docs/reference/tools):** Information on how tools
   are defined, registered, and used by the core.
 - **[Memory Import Processor](/docs/reference/memport):** Documentation for the
