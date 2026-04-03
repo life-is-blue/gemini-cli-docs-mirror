@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-02T00:22:52Z",
+  "generated_at": "2026-04-03T00:24:18Z",
   "tool": "scripts/fetch_gemini_docs.py",
   "strict_fetch": false,
   "sources": [
@@ -25,630 +25,630 @@
       "url": "https://geminicli.com/docs/admin/enterprise-controls.md",
       "sha256": "df964c5bf9a0a31f2ca2d36ae941c041f598b13cfbdc6d64696b67233ea14caa",
       "bytes": 6448,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/changelogs.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/changelogs.md",
-      "sha256": "f25e443806e056199cb6c7e6d4a426ee6ef12d1006d8baa28b8101077fca7550",
-      "bytes": 52337,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "sha256": "7b3b5bafd9e7ddc1ffe8006af5c99844afe7d45a8764fd6b8548449344350507",
+      "bytes": 53731,
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/changelogs/latest.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/changelogs/latest.md",
-      "sha256": "49a5ca394edc9b8f9b06edb9ef8e62c6a49bd31350fb341a7c10b6247adb9689",
-      "bytes": 24123,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "sha256": "d3d4bbdb9bd62f61562e412909689233cddbe591d31c5353604bfad3143bc3a6",
+      "bytes": 23421,
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/changelogs/preview.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/changelogs/preview.md",
-      "sha256": "ecd8fb7187247f6a8c72bfc2c8e3a3e1ecd0ce48ce329c96d62f0644b47d70da",
-      "bytes": 24079,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "sha256": "bd1fa3a181511790b25861a7a0da3d7c30b256563890c3c3578b2030c1a5f24f",
+      "bytes": 26567,
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/cli/acp-mode.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/cli/acp-mode.md",
       "sha256": "00a149d00cfb5e84faa546594424dd0c07673de1fdb597025609bb330f30c5dd",
       "bytes": 4656,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/cli/checkpointing.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/cli/checkpointing.md",
       "sha256": "e6836c8c082d1b75f5372e74dc9e7978af853e13778658af6d681bde4529be89",
       "bytes": 3111,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/cli/cli-reference.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/cli/cli-reference.md",
       "sha256": "873f53318e77d54c32dd5af9ebdff9cb0c322088ab37705bb18807ade45d8345",
       "bytes": 16180,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/cli/creating-skills.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/cli/creating-skills.md",
       "sha256": "7335f13a3236bd14c603a28ac50ff8fe95ca21b98451af5cb7cc50062ca11a95",
       "bytes": 2381,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/cli/custom-commands.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/cli/custom-commands.md",
       "sha256": "001b3f0792bed8036d3af8abe10e94403da803a42d3a2488b70c842eeef6996b",
       "bytes": 12037,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/cli/enterprise.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/cli/enterprise.md",
       "sha256": "3b6078776edb081a529e0271e700925631fae4a312e23cb318fde1f6dc6f127f",
       "bytes": 19119,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/cli/gemini-ignore.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/cli/gemini-ignore.md",
       "sha256": "e5b00b678c2af2e6936d77f4cf42e5320e0e76059311fab8d6e13da18186c184",
       "bytes": 2072,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/cli/gemini-md.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/cli/gemini-md.md",
       "sha256": "8cffd03e1c4bb1fe0d1a04e569ed99c6d70c6bc88cbe3b867138ead45594ef11",
       "bytes": 3955,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/cli/generation-settings.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/cli/generation-settings.md",
       "sha256": "49ad64e0b262e63fe66e2a43e923c14c81f5741dc7b6a21311d961d63772da5d",
       "bytes": 6410,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/cli/git-worktrees.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/cli/git-worktrees.md",
       "sha256": "9044595387df93c22e428c08591a6e11accb410c9f53f0628f6339ec17a73e2b",
       "bytes": 3581,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/cli/headless.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/cli/headless.md",
       "sha256": "0c76556026820577ca1ead8c836c590a079e637100bff9790c0f1599d0f9f172",
       "bytes": 1587,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/cli/model-routing.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/cli/model-routing.md",
       "sha256": "840b6f368ec69b7f36b7635098d8a80e5fcb822d00efba133ba70110fe5b7a44",
       "bytes": 2787,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/cli/model-steering.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/cli/model-steering.md",
       "sha256": "91296469eb679eb248befd3706f9a86ebd0453b7a38672dcee0f45f8bcc51e45",
       "bytes": 2896,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/cli/model.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/cli/model.md",
       "sha256": "bcc9b47329b64f277711222c3349f00f35595483961ca4f8cabc3148fa39970d",
       "bytes": 2729,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/cli/notifications.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/cli/notifications.md",
       "sha256": "1ceb00806d3b7e3d203c39cbeb7cde6372f696941885e9b80d8e5183758414c9",
       "bytes": 1966,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/cli/plan-mode.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/cli/plan-mode.md",
-      "sha256": "97738c1d1a36087a4da671d6fec6a9c74f359a4e6feacff39bc8e5d9b778d522",
-      "bytes": 18725,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "sha256": "cc7d1a6aed97986246d8568930ede7cd3bad462ea012062a55dfb01134da693f",
+      "bytes": 19157,
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/cli/rewind.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/cli/rewind.md",
       "sha256": "3acdbefd5bcdb6655a2b7e845e6fae23df03dea64ce84dd2137b3bc42cd027dc",
       "bytes": 2329,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/cli/sandbox.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/cli/sandbox.md",
       "sha256": "e3ffad0de9e2fa47c7bf51f2794f162360215d586bfc1232a62d7b650b7c20a2",
       "bytes": 8009,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/cli/session-management.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/cli/session-management.md",
       "sha256": "f16a181d6c75bd74f44cfc99fa22d162d143891b6abddbcea30ef1849b5a8f22",
       "bytes": 6365,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/cli/settings.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/cli/settings.md",
-      "sha256": "ef577a34ed34ca79ec0da14bfcd142b6ecc1afc5ba975f98430f2ba443d1d510",
-      "bytes": 30154,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "sha256": "2b53887f1bb2cd33dc2b5e91f26007d55c82774555fdce6ab4cee8eb8982930a",
+      "bytes": 30685,
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/cli/skills.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/cli/skills.md",
       "sha256": "f9beaaf673c1e21d694dc7bc95f84c0fb603317db8e694a02115c15e1255b338",
       "bytes": 5847,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/cli/system-prompt.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/cli/system-prompt.md",
       "sha256": "d4e0cfd728dc1081635c2236de60fcc6213a7daede5da5aa22d987d3e22cfcc6",
       "bytes": 4616,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/cli/telemetry.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/cli/telemetry.md",
       "sha256": "c07baad6b75b26f25c282903dec5de794763449bb13ebe1e2e8e1f6b63beeb29",
       "bytes": 29038,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/cli/themes.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/cli/themes.md",
       "sha256": "9aae6a6eca74327a809d0ac905d5ed3dabef744f71107feb6a5ce6a0ff8f619d",
       "bytes": 8082,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/cli/token-caching.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/cli/token-caching.md",
       "sha256": "f5ab05cebdb36f905848e4ba266716804d33461a0311510926b0de095f427a29",
       "bytes": 753,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/cli/trusted-folders.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/cli/trusted-folders.md",
       "sha256": "5fa5768c6eb207a326decfdcec852bac663c13f15dc3151df3dde972a1b25679",
       "bytes": 4989,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/cli/tutorials/automation.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/cli/tutorials/automation.md",
       "sha256": "b91e786382d8ff961a0eb4f79ef13444627abdcc5e58c0a92ff82dca93a10bf6",
       "bytes": 7154,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/cli/tutorials/file-management.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/cli/tutorials/file-management.md",
       "sha256": "cce3fb6b899356104eae74e93f302d7744cf7f4374f39bbbd84560fddc3d530a",
       "bytes": 4502,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/cli/tutorials/mcp-setup.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/cli/tutorials/mcp-setup.md",
       "sha256": "4da9a70ccd4f7cd78877c724618302379e80accfb9abc26002e7c96b8eab528a",
       "bytes": 3243,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/cli/tutorials/memory-management.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/cli/tutorials/memory-management.md",
       "sha256": "a59f8d999cafdead274196a9b21501e056f83f580f2928b61a5e450d7867340c",
       "bytes": 4394,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/cli/tutorials/plan-mode-steering.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/cli/tutorials/plan-mode-steering.md",
       "sha256": "780767fd8e398ac1f3b2c4f3fbaff9556681a7813a5baa844c06945e3adfc71b",
       "bytes": 3521,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/cli/tutorials/session-management.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/cli/tutorials/session-management.md",
       "sha256": "f671414287fa9778241dacdb17f2c0abe136de638a389c53f5ec2b5c3cff2a7a",
       "bytes": 3321,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/cli/tutorials/shell-commands.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/cli/tutorials/shell-commands.md",
       "sha256": "1ac7c0840b4490180adc33b82ffb560afa3688777b856f68a4e1c6ddb6568761",
       "bytes": 3627,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/cli/tutorials/skills-getting-started.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/cli/tutorials/skills-getting-started.md",
       "sha256": "b50f9fca4dd779f2379892dd87b7a19d936f3848fd913e5ff663bdba113842b8",
       "bytes": 3240,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/cli/tutorials/task-planning.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/cli/tutorials/task-planning.md",
       "sha256": "3bf9a1756b671df1c5f1159ef92a7418e52bd499cadaa51bac3bcecb7accdb5e",
       "bytes": 3057,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/cli/tutorials/web-tools.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/cli/tutorials/web-tools.md",
       "sha256": "372779d79765a471e3e273696e1eca1fd7d48fa60f73272d5eb47108cf1f4a4a",
       "bytes": 2534,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/contributing.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/contributing.md",
       "sha256": "adefd02662caaa4341d5fed50bbe1c205b894b13ddfff234988e94c7dc9f8f61",
       "bytes": 20203,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/core.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/core.md",
       "sha256": "0d03ef89160bab6d5c9599d00f913f3c6e32403a9b614b58a3ad6ce4c13df388",
       "bytes": 5016,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/core/local-model-routing.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/core/local-model-routing.md",
       "sha256": "492e0b28cf8a26892cf7620ff886c0a0f6b7b867be557a000d76e6103a50f2bd",
       "bytes": 6845,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/core/remote-agents.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/core/remote-agents.md",
-      "sha256": "73340a15c1443b3490d8e14a048faa9b8887b9e3e0438c4ceee9bd67582a4d66",
-      "bytes": 17119,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "sha256": "947d39e2b8bb6be211628e8de0d53172c7681803f41b7b3c1ff0b82821a35fdd",
+      "bytes": 17052,
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/core/subagents.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/core/subagents.md",
-      "sha256": "1c86d7302b58bc2f87420e1ae333376b98abba5b7c2f5cfcb5329c86dd658077",
-      "bytes": 20082,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "sha256": "0b5f0616e6ddb631b05d028a886a0c545b263a221c75e29cef2f9845345ef8f2",
+      "bytes": 22349,
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/examples/proxy-script.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/examples/proxy-script.md",
       "sha256": "7d0b26c540e3984882e7c4781018ad0416ee366b0be60e7bd6f6c08ae5dedba3",
       "bytes": 2822,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/extensions.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/extensions.md",
       "sha256": "0c3fdda2d4d53ff45902fd8732d14eb87ecf563a3c3ad6c2700d4d0216069a90",
       "bytes": 1836,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/extensions/best-practices.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/extensions/best-practices.md",
       "sha256": "b47e56747744f49495be60d87f8b8975b8d8935ecb0c3d74ccb6728f0bf92163",
       "bytes": 5777,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/extensions/reference.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/extensions/reference.md",
       "sha256": "ea1446907e033c13542c3cc80066f8d799238c25d3fe419abf6507798b9297d1",
       "bytes": 11307,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/extensions/releasing.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/extensions/releasing.md",
       "sha256": "f799e5fcc151e5cafe83304c4b66810edbc895ad3f7f8fb736cd252870332e8f",
       "bytes": 6442,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/extensions/writing-extensions.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/extensions/writing-extensions.md",
       "sha256": "f3bd4bb35915d2f66d474169f717aecfdeb363f52d7166bc43314d0672cbe9fe",
       "bytes": 11922,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/get-started.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/get-started.md",
       "sha256": "f4ff0d710358cb8894247abc1c56021355b79e1fda401b7b0d0a486ea0f96685",
       "bytes": 6357,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/get-started/authentication.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/get-started/authentication.md",
       "sha256": "0422b629596a593a5617cceefa0a8db3228d1155c362d5f8f955428abfd414b7",
       "bytes": 14043,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/get-started/gemini-3.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/get-started/gemini-3.md",
       "sha256": "02d0aba3b83ab2845ba37c28553030eb18a144dadaaed4ef9d523961e20904be",
       "bytes": 4622,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/get-started/installation.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/get-started/installation.md",
       "sha256": "8ac30e4a3d8810652a166a16997bc05bb6bbe05d971122dd86a8cfbc03b9a206",
       "bytes": 4960,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/hooks.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/hooks.md",
       "sha256": "1da6112beee921c9714da405c4e67cdaa77a8616f118f43d695f4f8936073409",
       "bytes": 8247,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/hooks/best-practices.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/hooks/best-practices.md",
       "sha256": "f106c8b566195323c7bbad60e664cfea03e15f9fa7060deaf8714695cbfe4d32",
       "bytes": 17575,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/hooks/reference.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/hooks/reference.md",
       "sha256": "16a1489c56efa233f28d367ddb85cfc934bd84957c7f9de848169395834e0223",
       "bytes": 13272,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/hooks/writing-hooks.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/hooks/writing-hooks.md",
       "sha256": "09b54285a44502abe95396b0c740279d31f01c53d98a77a17974da2b66984775",
       "bytes": 11532,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/ide-integration.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/ide-integration.md",
       "sha256": "75f108499c34338c306b8067c48776303c37bbfcd20123e3891bb14ba300bda4",
       "bytes": 11698,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/ide-integration/ide-companion-spec.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/ide-integration/ide-companion-spec.md",
       "sha256": "0f0560d9e88f0c021fa41e89049fd6820d9ef25c65ebb3d5f8893ceec6f9691e",
       "bytes": 10763,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/index.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs.md",
       "sha256": "a812c1ad60c6f2df294a5009f499691e806d59fdf5fe5e37600481d65f20399f",
       "bytes": 5934,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/integration-tests.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/integration-tests.md",
       "sha256": "02597b22508023bb674a66370a9a439dd6686938e40d7d12d7efceb085f6632c",
       "bytes": 5889,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/issue-and-pr-automation.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/issue-and-pr-automation.md",
       "sha256": "febe5f9f08a48c247249af0b5529dbead003bddbbd1d7b7bab0c612914176a60",
       "bytes": 8616,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/local-development.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/local-development.md",
       "sha256": "5f1d7e769189463d8daa9299dc86ea8e46d16f74bf8b3ceac61170603800d632",
       "bytes": 4889,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/npm.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/npm.md",
       "sha256": "bc2069978b6c6acfb8518e2f458094c2925999ed20dc0eb690e2298cbd7d982b",
       "bytes": 2547,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/reference/commands.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/reference/commands.md",
       "sha256": "052f03bb6bd83cae4067e51baaa8c33082a82f2d7ac5b81c6d120b4c214bc2cc",
       "bytes": 23621,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/reference/configuration.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/reference/configuration.md",
-      "sha256": "158fe3196bba7d3b96d739dc1eea63de7c46c52c0f6a5b089e04ab62412d1b1b",
-      "bytes": 87489,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "sha256": "6c84e89f5ffa2581832ebc1fc078b278b9967580c6a1dc81b27f90c60041081f",
+      "bytes": 87827,
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/reference/keyboard-shortcuts.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/reference/keyboard-shortcuts.md",
       "sha256": "547de6e5124d5dbeeb7dc963274294db4bfd063177768b37943846966cbd0b48",
       "bytes": 17804,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/reference/memport.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/reference/memport.md",
       "sha256": "d090fa9a2bd8a1f539672670bd93d8e40237c5b47eca1557fd1191c4d4d33234",
       "bytes": 6386,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/reference/policy-engine.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/reference/policy-engine.md",
-      "sha256": "95aa97641978b9f3fe12b36dc34d40ebf17b3ce058d111a0f6647ca9798874a0",
-      "bytes": 16259,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "sha256": "8ae7e7119ccc8ab509b229fbb2682c778729dfc63496bd5dab62a38aac8e04ef",
+      "bytes": 17345,
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/reference/tools.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/reference/tools.md",
       "sha256": "4b29a2634751201b1039fdd72b266b231484b8195aca6f1cef8f5e8197a1405b",
       "bytes": 9143,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/release-confidence.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/release-confidence.md",
       "sha256": "26fca33f35e05cac4f228a19255e9e39d25205fd8f8082d9006cb340066d256f",
       "bytes": 5641,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/releases.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/releases.md",
       "sha256": "c2c493507dc58cbcdb7fbaa4ce3ab66bdc511749245860b062375f9c9873ae81",
       "bytes": 22995,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/resources/faq.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/resources/faq.md",
       "sha256": "18a43d92ed0a91141fc0b49577b5cfce19a85f2d2a94dbab5be4be73c26b4830",
       "bytes": 8101,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/resources/quota-and-pricing.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/resources/quota-and-pricing.md",
       "sha256": "3d39533874eae1ba384df53f32a4b58d891c11ef08736255c7a19ee53233b062",
       "bytes": 9146,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/resources/tos-privacy.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/resources/tos-privacy.md",
       "sha256": "8ca1d6957f53ff3f394034367d9e663055697613bfe7486c5818dd9cc8e264c0",
       "bytes": 6686,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/resources/troubleshooting.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/resources/troubleshooting.md",
       "sha256": "c01e8b621f88f8ac31751f546abb6a40d0e15e3c9988d9db7faa5d71ae2ce6b2",
       "bytes": 10437,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/resources/uninstall.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/resources/uninstall.md",
       "sha256": "641de549c37d54384ef2a401f9500db6703b71958fe47ec3e2ae7c53e53212c7",
       "bytes": 1518,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/tools/activate-skill.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/tools/activate-skill.md",
       "sha256": "e3882a1c0387de563bd88024f23e419360d9a0bbf4d9de6a457652aa4bc1ddfc",
       "bytes": 1517,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/tools/ask-user.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/tools/ask-user.md",
       "sha256": "7222e41bd0118e7036852fc730aac1683a11a38b327a106db35074f946f126ed",
       "bytes": 2797,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/tools/file-system.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/tools/file-system.md",
       "sha256": "33d547ade64ef5ff050b43dc0a0a38b91fdf3711892ae5e211d03f0f6370b1df",
       "bytes": 5126,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/tools/internal-docs.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/tools/internal-docs.md",
       "sha256": "2b5d22b3056a66aec6407842d53e552f726a330bcb77b0b5cf45a7270995f729",
       "bytes": 1682,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/tools/mcp-server.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/tools/mcp-server.md",
       "sha256": "047e47e0eb9d220a97868a598ee67f97b2470abb38ec03124b9285f3c201f1fc",
       "bytes": 39176,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/tools/memory.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/tools/memory.md",
       "sha256": "e3681c4e02d71cf18b927ca9ff620b464ff8a618e49ef58050ee6687c2275af3",
       "bytes": 1171,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/tools/planning.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/tools/planning.md",
       "sha256": "63bd234acb2158ff3672e35d3891cb2f0837f3ad0cf31991c62b155c4241fc1d",
       "bytes": 2638,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/tools/shell.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/tools/shell.md",
       "sha256": "62d807486c54288037e5ece11ab7eb09640628499935b48425a786b293ba4c39",
       "bytes": 7249,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/tools/todos.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/tools/todos.md",
       "sha256": "9518f9f816cf2f2a723065f6942fe61fa53f19cd78b9cf3f608a70b0cda840ee",
       "bytes": 1245,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/tools/web-fetch.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/tools/web-fetch.md",
       "sha256": "4b25d7bb5141e1719f11ea863e5c3bab1d78b95ec02668e77d729c54935d0db8",
       "bytes": 1424,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     },
     "gemini-cli/tools/web-search.md": {
       "source": "gemini-cli",
       "url": "https://geminicli.com/docs/tools/web-search.md",
       "sha256": "3a016af1e915840dc0a42b876c72ac85109981b013d158f5e2d7b36dc6a89e97",
       "bytes": 1155,
-      "fetched_at": "2026-04-02T00:22:40Z"
+      "fetched_at": "2026-04-03T00:24:07Z"
     }
   }
 }
