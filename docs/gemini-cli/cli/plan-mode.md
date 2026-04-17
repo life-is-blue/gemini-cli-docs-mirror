@@ -130,7 +130,9 @@ These are the only allowed tools:
   [`cli_help`](/docs/core/subagents#cli-help-agent)
 - **Interaction:** [`ask_user`](/docs/tools/ask-user)
 - **MCP tools (Read):** Read-only [MCP tools](/docs/tools/mcp-server) (for
-  example, `github_read_issue`, `postgres_read_schema`) are allowed.
+  example, `github_read_issue`, `postgres_read_schema`) and core
+  [MCP resource tools](/docs/tools/mcp-resources) (`list_mcp_resources`,
+  `read_mcp_resource`) are allowed.
 - **Planning (Write):**
   [`write_file`](/docs/tools/file-system#3-write_file-writefile) and
   [`replace`](/docs/tools/file-system#6-replace-edit) only allowed for `.md`
