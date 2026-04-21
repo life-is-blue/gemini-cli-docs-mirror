@@ -92,6 +92,21 @@ each tool.
 | [`ask_user`](/docs/tools/ask-user) | `Communicate` | Requests clarification or missing information via an interactive dialog.               |
 | [`write_todos`](/docs/tools/todos) | `Other`       | Maintains an internal list of subtasks. The model uses this to track its own progress. |
 
+### Task Tracker (Experimental)
+
+<!-- prettier-ignore -->
+> [!NOTE]
+> This is an experimental feature currently under active development. Enable via `experimental.taskTracker`.
+
+| Tool                                            | Kind    | Description                                                                 |
+| :---------------------------------------------- | :------ | :-------------------------------------------------------------------------- |
+| [`tracker_create_task`](/docs/tools/tracker)    | `Other` | Creates a new task in the experimental tracker.                             |
+| [`tracker_update_task`](/docs/tools/tracker)    | `Other` | Updates an existing task's status, description, or dependencies.            |
+| [`tracker_get_task`](/docs/tools/tracker)       | `Other` | Retrieves the full details of a specific task.                              |
+| [`tracker_list_tasks`](/docs/tools/tracker)     | `Other` | Lists tasks in the tracker, optionally filtered by status, type, or parent. |
+| [`tracker_add_dependency`](/docs/tools/tracker) | `Other` | Adds a dependency between two tasks, ensuring topological execution.        |
+| [`tracker_visualize`](/docs/tools/tracker)      | `Other` | Renders an ASCII tree visualization of the current task graph.              |
+
 ### MCP
 
 | Tool                                              | Kind     | Description                                                            |
