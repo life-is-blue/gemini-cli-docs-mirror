@@ -15,8 +15,9 @@ requests sent from `packages/cli`. For a general overview of Gemini CLI, see the
   modular GEMINI.md import feature using @file.md syntax.
 - **[Policy Engine](/docs/reference/policy-engine):** Use the Policy Engine for
   fine-grained control over tool execution.
-- **[Local Model Routing (experimental)](/docs/core/local-model-routing):** Learn how
-  to enable use of a local Gemma model for model routing decisions.
+- **[Local Model Routing (experimental)](/docs/core/gemma-setup):** Learn how to
+  enable use of a local Gemma model for model routing decisions using the
+  automated setup command.
 
 ## Role of the core
 
