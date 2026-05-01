@@ -40,4 +40,4 @@ The agent uses this tool to provide professional-grade assistance:
 ## Next steps
 
 - Learn how to [Use Agent Skills](/docs/cli/skills).
-- See the [Creating Agent Skills](/docs/cli/creating-skills) guide.
+- See the [Build agent skills](/docs/cli/creating-skills) guide.
