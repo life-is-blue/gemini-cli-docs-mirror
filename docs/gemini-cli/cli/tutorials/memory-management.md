@@ -125,4 +125,4 @@ immediately. Force a reload with:
   `/memory` options.
 - Read the technical spec for [Project context](/docs/cli/gemini-md).
 - Try the experimental [Auto Memory](/docs/cli/auto-memory) feature to extract
-  reusable skills from your past sessions automatically.
+  memory updates and reusable skills from your past sessions automatically.
