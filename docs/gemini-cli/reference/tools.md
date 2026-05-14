@@ -120,7 +120,6 @@ each tool.
 | :----------------------------------------------- | :------ | :----------------------------------------------------------------------------------- |
 | [`activate_skill`](/docs/tools/activate-skill)   | `Other` | Loads specialized procedural expertise from the `.gemini/skills` directory.          |
 | [`get_internal_docs`](/docs/tools/internal-docs) | `Think` | Accesses Gemini CLI's own documentation for accurate answers about its capabilities. |
-| [`save_memory`](/docs/tools/memory)              | `Think` | Persists specific facts and project details to your `GEMINI.md` file.                |
 
 ### Planning
 
@@ -173,7 +172,6 @@ representation of each tool's arguments.
 | `replace`                | `file_path`, `old_string`, `new_string`, `instruction`, `allow_multiple`                                                                                                                             |
 | `ask_user`               | `questions` (array of `question`, `header`, `type`, `options`)                                                                                                                                       |
 | `write_todos`            | `todos` (array of `description`, `status`)                                                                                                                                                           |
-| `save_memory`            | `fact`                                                                                                                                                                                               |
 | `activate_skill`         | `name`                                                                                                                                                                                               |
 | `get_internal_docs`      | `path`                                                                                                                                                                                               |
 | `enter_plan_mode`        | `reason`                                                                                                                                                                                             |
