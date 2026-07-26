@@ -1,4 +1,4 @@
-name: Update Gemini CLI Docs Mirror
+name: Update CLI Docs Mirror
 
 on:
   schedule:
@@ -14,7 +14,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: gemini-cli-docs-mirror
+  group: cli-docs-mirror
   cancel-in-progress: true
 
 jobs:
@@ -36,7 +36,7 @@ jobs:
       - name: Fetch docs
         env:
           STRICT_FETCH: ${{ github.event.inputs.strict_fetch || '0' }}
-        run: python scripts/fetch_gemini_docs.py
+        run: python scripts/fetch_docs.py
 
       - name: Commit and push when changed
         run: |

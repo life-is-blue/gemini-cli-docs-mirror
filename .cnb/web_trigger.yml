@@ -1,8 +1,8 @@
 branch:
   - reg: ^main$
     buttons:
-      - name: Sync Gemini CLI Docs
-        description: 立即同步 Gemini CLI 文档到 docs 目录
+      - name: Sync CLI Docs
+        description: 立即同步 Gemini CLI / Cursor CLI 文档到 docs 目录
         event: web_trigger.sync_docs
         isDefault: true
         inputs:
