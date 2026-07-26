@@ -7,6 +7,14 @@
       "docs_path_prefix": "/docs/",
       "root_docs_path": "/docs.md",
       "output_subdir": "gemini-cli"
+    },
+    {
+      "id": "cursor-cli",
+      "llms_txt": "https://cursor.com/llms.txt",
+      "allowed_host": "cursor.com",
+      "docs_path_prefix": "/docs/cli/",
+      "root_docs_path": "/docs/cli.md",
+      "output_subdir": "cursor-cli"
     }
   ]
 }

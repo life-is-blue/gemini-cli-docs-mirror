@@ -1,5 +1,5 @@
 .verify-fetcher: &verify-fetcher
-  name: verify-gemini-docs-fetcher
+  name: verify-docs-fetcher
   ifModify:
     - .cnb.yml
     - .cnb/web_trigger.yml
@@ -15,12 +15,12 @@
         - pip install -r scripts/requirements.txt
     - name: strict-fetch-check
       script:
-        - STRICT_FETCH=1 python scripts/fetch_gemini_docs.py
+        - STRICT_FETCH=1 python scripts/fetch_docs.py
 
-.sync-gemini-docs: &sync-gemini-docs
-  name: sync-gemini-docs
+.sync-docs: &sync-docs
+  name: sync-docs
   lock:
-    key: gemini-cli-docs-mirror-sync
+    key: cli-docs-mirror-sync
     wait: true
     timeout: 7200
   retry: 2
@@ -32,9 +32,9 @@
         - python -V
         - pip install --upgrade pip
         - pip install -r scripts/requirements.txt
-    - name: fetch-gemini-docs
+    - name: fetch-docs
       script:
-        - STRICT_FETCH=${STRICT_FETCH:-0} python scripts/fetch_gemini_docs.py
+        - STRICT_FETCH=${STRICT_FETCH:-0} python scripts/fetch_docs.py
     - name: commit-and-push
       script:
         - |
@@ -59,6 +59,6 @@ main:
   pull_request:
     - <<: *verify-fetcher
   "crontab: 0 0 * * *":
-    - <<: *sync-gemini-docs
+    - <<: *sync-docs
   web_trigger.sync_docs:
-    - <<: *sync-gemini-docs
+    - <<: *sync-docs
